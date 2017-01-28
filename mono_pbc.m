@@ -15,8 +15,8 @@ for i = 2:1:n
             m(j, j+1) = t;
             a = [a; i];
         end
-        %m(1,i) = t;
-        %m(i,1) = t;
+        m(1,i) = t;
+        m(i,1) = t;
     end
     a = horzcat(a, eig(m));
     data = [data; a];
