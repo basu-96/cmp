@@ -1,6 +1,6 @@
  E = [8, 1; 1, 10];% E1 = 8, E2 = 10
  Y = [0.7, 0.5; 0.5, 0.6];
- n = 500;% # OF ATOMS
+ n = 500;% number of atoms in the chain
 
  
    

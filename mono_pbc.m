@@ -1,7 +1,7 @@
 %matlab code for finding eigen value single electron chain with PBC
 E = 10;
 t = 1;
-n = 100;
+n = 100;%number of atoms in the chain  
 data = [];
 
 for i = 2:1:n
