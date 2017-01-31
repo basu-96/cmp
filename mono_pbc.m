@@ -7,6 +7,7 @@ data = [];
 for i = 2:1:n
     d = zeros(1,i);
     d(2) = 1;
+    d(i) = 1;
     a = [];
     for j = 1:1:i
         a = [a;i];
