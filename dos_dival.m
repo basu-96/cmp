@@ -2,13 +2,12 @@
  Y = [0.7, 0.5; 0.5, 0.6];
  n = 500;% number of atoms in the chain
 
- 
-   
-     m1 = kron(eye(n-1), Y);
-     m1 = [m1; zeros(2, 2*(n-1))];
-     m1 = horzcat(zeros(2*n, 2), m1);
-     m2 = m1';
-     m = kron(eye(n), E) + m1 + m2;
+ d = zeros(1, n);
+ d(2) = 1;
+
+
+ m = kron(toeplitz(d), Y) + kron(eye(n), E); 
+
 
 
 

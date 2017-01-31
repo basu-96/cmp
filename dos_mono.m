@@ -4,22 +4,10 @@ E = 10;
 t = 1;
 n = 500;
 
+d = zeros(1, n);
+d(2) = 1;
 
-
-    m = zeros(n);
-
-    for j = 1:1:n
-        m(j, j) = E;
-        if j < n
-           
-            m(j+1, j) = t;
-            m(j, j+1) = t;
-
-        end
-        %m(1,i) = t;
-        %m(i,1) = t;
-    end
-
+m = kron(toeplitz(d), t) + kron(eye(n), E); 
     
 
 h = histogram(eig(m), 100);
