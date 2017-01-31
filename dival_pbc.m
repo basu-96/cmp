@@ -17,6 +17,6 @@
  end
 
 plot(data(:,1), data(:,2), '.');
-title('Energy eigen values distribution without periodic boundary condition');
+title('Energy eigen values distribution with periodic boundary condition');
 xlabel('Dimension(# of atoms)');
 ylabel('Energy eigen value');
