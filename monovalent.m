@@ -5,19 +5,15 @@ n = 100;
 data = [];
 
 for i = 2:1:n
-    m = zeros(i);
-    a = i;
+    d = zeros(1,i);
+    d(2) = 1;
+    a = [];
     for j = 1:1:i
-        m(j, j) = E;
-        if j < i
-           
-            m(j+1, j) = t;
-            m(j, j+1) = t;
-            a = [a; i];
-        end
-        %m(1,i) = t;
-        %m(i,1) = t;
+        a = [a;i];
     end
+    m1 = toeplitz(d);
+    m2 = eye(i);
+    m = kron(m1, t) + kron(m2, E);
     a = horzcat(a, eig(m));
     data = [data; a];
     
